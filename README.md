@@ -7,3 +7,4 @@ B.Sc.-thesis repository contains Python code, ROS packages, trained models, gene
 - The "dv-ros" package for the iniVation DVXplorer mini event-based camera is available from https://gitlab.com/inivation/dv/dv-ros
 
 Video clips are available in the inference results for review of the predicted bboxes.
+All labelled training data and test data ground truth is available at: https://app.roboflow.com/au-bachelor-projekt-kqx8k
