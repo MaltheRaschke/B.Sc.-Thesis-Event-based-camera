@@ -5,3 +5,5 @@ B.Sc.-thesis repository contains Python code, ROS packages, trained models, gene
 - After installing Unreal Engine 4.27 and AirSim from https://microsoft.github.io/AirSim/ the event_pack package should be placed in catkin_ws.
 - The "datagen" package is available from https://github.com/phxhuy/datagen for generating flying scenarios.
 - The "dv-ros" package for the iniVation DVXplorer mini event-based camera is available from https://gitlab.com/inivation/dv/dv-ros
+
+Video clips are available in the inference results for review of the predicted bboxes.
