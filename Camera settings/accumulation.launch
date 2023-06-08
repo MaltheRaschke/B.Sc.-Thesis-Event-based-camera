@@ -1,0 +1,20 @@
+<launch>
+
+    <node pkg="dv_ros_capture" type="capture_node" name="capture_node" clear_params="true" output="screen" required="true"/>
+        <param name="noise_filtering" value="true" />
+
+    <node pkg="dv_ros_accumulation" type="accumulator" name="accumulator" clear_params="true" output="screen">
+        <remap from="/accumulator/events" to="/capture_node/events" />
+        <param name="noise_filtering" value="true" />
+        <param name="accumulation_number" value="100000" />
+        <param name="slice_method" value="1" />
+        <param name="decay_function" value="3" />
+        <param name="event_contribution" value="1" />
+        <param name="neutral_potential" value="0.5" />
+        
+    </node>
+
+    <node pkg="rqt_gui" type="rqt_gui" name="reconfigure" respawn="false"
+        args = "--perspective-file $(find dv_ros_accumulation)/launch/rqt/accumulator.perspective" />
+
+</launch>
